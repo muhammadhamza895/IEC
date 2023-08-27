@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- REMIX ICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- GOOGLE ICONS -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree&family=Inter&display=swap" rel="stylesheet">
+
+    <!-- CSS  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="input.css">
+
+</head>
+
+<body class="font-figtree">
+
+    <!-- NAVBAR -->
+    <div id="navbar"
+        class="sticky top-0 z-20 bg-white flex items-center justify-between py-1 pr-4 md:py-2 md:pl-2 md:pr-6 lg:pl-3 lg:pr-10 lg:pt-2">
+
+        <img src="IEC logo.png" class="xl:w-[13.688rem]" alt="">
+        <i id="menu" onclick="" class="ri-menu-line text-lg lg:hidden"></i>
+
+        <!-- ONBOARING-PROGRESS -->
+        <div class="hidden lg:flex lg:space-x-3 lg:items-center text-sm">
+            <p>Onboarding</p>
+            <p class="bg-[#FFF0F1] text-[#B61802] px-1 rounded-[4px]">In progress</p>
+        </div>
+
+        <!-- NAVBAR PROFILE ICONS -->
+        <div class="hidden lg:flex lg:items-center lg:space-x-4">
+            <span
+                class="material-symbols-outlined cursor-pointer text-[#686869] text-2xl bg-[#E0E5EB] rounded-[100%] pl-1 pr-[0.28rem]">notifications_active</span>
+            <span
+                class="material-symbols-outlined cursor-pointer text-[#686869] text-2xl bg-[#E0E5EB] rounded-[100%] px-1">person</span>
+            <button id="profileDropdown" class="relative flex items-center text-sm font-[600] tracking-wide">
+                <p>Name</p>
+                <i class="ri-arrow-down-s-line"></i>
+
+                <!-- PROFILE DROPDOWN -->
+                <div id="profileOptions"
+                    class="absolute hidden top-10 right-0 w-max bg-white rounded-[8px] py-2 md:py-3 xl:py-4 shadow-2xl">
+                    <div class="flex flex-col px-3  md:px-5 space-y-1 xl:px-7">
+                        <p class="text-[#000] xl:text-[1rem] sm:text-[0.85rem]  text-xs font-[500]">Student Name</p>
+                        <p class="text-[#B9B9B9] xl:text-[1rem] text-[0.85rem]   font-[500]">ID:</p>
+                    </div>
+                    <hr class="color-[#ECECED] my-2">
+                    <div class="flex flex-col px-2  md:px-2 xl:px-4 space-y-1 lg:space-y-1">
+                        <a href="profile.html"
+                            class="md:px-2 xl:px-2 lg:py-1 flex items-center space-x-2 sm:space-x-3 cursor-pointer hover:bg-[#F5F5F5] rounded-[6px]">
+                            <span id="profile" class="material-symbols-outlined">person</span>
+                            <p class="text-[#000] xl:text-[1rem] text-[0.85rem]   font-[500]">Profile</p>
+                        </a>
+                        <a href="editProfile.html"
+                            class="md:px-2 xl:px-2 lg:py-1 flex items-center space-x-2 sm:space-x-3 cursor-pointer hover:bg-[#F5F5F5] rounded-[6px]">
+                            <span class="material-symbols-outlined">edit</span>
+                            <p class="text-[#000] xl:text-[1rem] text-[0.85rem]   font-[500]">Edit</p>
+                        </a>
+                        <a
+                            class="md:px-2 xl:px-2 lg:py-1 flex items-center space-x-2 sm:space-x-3 cursor-pointer hover:bg-[#F5F5F5] rounded-[6px]">
+                            <span class="material-symbols-outlined text-[#E22E12]">login</span>
+                            <p class="text-[#E22E12] xl:text-[1rem] text-[0.85rem]   font-[500]">Log out</p>
+                        </a>
+
+                    </div>
+                </div>
+
+            </button>
+        </div>
+
+    </div>
+
+    <!-- BODY -->
+    <div class="flex pb-10">
+
+        <!-- SIDEBAR -->
+        <div id="sidebar"
+            class="hidden lg:inline-block h-[100vh] fixed top-[64px] overflow-y-hidden bg-white z-10 px-4 py-5 md:px-6 lg:py-9 xl:px-8 xl:py-14 w-[17rem] md:w-[18rem] lg:w-[19rem] xl:w-[22rem]">
+            <ul class="text-[#242220] space-y-4 lg:space-y-5">
+                <li class="flex items-center justify-between sm:pr-2">
+                    <div class="flex items-center space-x-3 md:space-x-5">
+                        <i class="ri-apps-2-line"></i>
+                        <p class="font-[500] text-sm">Registration</p>
+                    </div>
+
+                    <!-- CHECK -->
+                    <div class="">
+                        <div class="h-[20px] w-[20px] bg-[#E0E5EB] rounded-[100%] text-center">
+                            <i class="ri-check-line  text-sm"></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="flex items-center justify-between sm:pr-2">
+                    <div class="flex items-center space-x-3 md:space-x-5">
+                        <i class="ri-book-open-line"></i>
+                        <p class="font-[500] text-sm lg:text-sm">Assessment</p>
+                    </div>
+
+                    <!-- CHECK -->
+                    <div class="">
+                        <div class="h-[20px] w-[20px] bg-[#E0E5EB] rounded-[100%] text-center">
+                            <i class="ri-check-line  text-sm"></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="flex items-center justify-between sm:pr-2">
+                    <div class="flex items-center space-x-3 md:space-x-5">
+                        <i class="ri-thumb-up-fill"></i>
+                        <p class="font-[500] text-sm lg:text-sm">LEC Agreement</p>
+                    </div>
+
+                    <!-- CHECK -->
+                    <div class="">
+                        <div class="h-[20px] w-[20px] bg-[#E0E5EB] rounded-[100%] text-center">
+                            <i class="ri-check-line  text-sm"></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="flex items-center justify-between sm:pr-2">
+                    <div class="flex items-center space-x-3 md:space-x-5">
+                        <i class="ri-flashlight-fill"></i>
+                        <p class="font-[500] text-sm lg:text-sm">Fee Registration</p>
+                    </div>
+
+                    <!-- CHECK -->
+                    <div class="">
+                        <div class="h-[20px] w-[20px] bg-[#E0E5EB] rounded-[100%] text-center">
+                            <i class="ri-check-line  text-sm"></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="flex items-center justify-between sm:pr-2">
+                    <div class="flex items-center space-x-3 md:space-x-5">
+                        <i class="ri-upload-line"></i>
+                        <p class="font-[500] text-sm lg:text-sm">Onboarding</p>
+                    </div>
+
+                    <!-- CHECK -->
+                    <div class="">
+                        <div class="h-[20px] w-[20px] bg-[#E0E5EB] rounded-[100%] text-center">
+                            <i class="ri-check-line  text-sm"></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="flex items-center justify-between sm:pr-2">
+                    <div class="flex items-center space-x-3 md:space-x-5">
+                        <img src="Frame.png" class="w-[1rem]" alt="">
+                        <p class="font-[500] text-sm lg:text-sm">Probation Week</p>
+                    </div>
+
+                    <!-- CHECK -->
+                    <div class="hidden">
+                        <div class="h-[20px] w-[20px] bg-[#E0E5EB] rounded-[100%] text-center">
+                            <i class="ri-check-line  text-sm"></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="flex items-center justify-between sm:pr-2">
+                    <div class="flex items-center space-x-3 md:space-x-5">
+                        <img src="shapes.png" class="w-[1rem]" alt="">
+                        <p class="font-[500] text-sm lg:text-sm">Bootcamp</p>
+                    </div>
+
+                    <!-- CHECK -->
+                    <div class="hidden">
+                        <div class="h-[20px] w-[20px] bg-[#E0E5EB] rounded-[100%] text-center">
+                            <i class="ri-check-line  text-sm"></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="flex items-center justify-between sm:pr-2">
+                    <div class="flex items-center space-x-3 md:space-x-5">
+                        <i class="ri-camera-lens-fill"></i>
+                        <p class="font-[500] text-sm lg:text-sm">Professional Development</p>
+                    </div>
+
+                    <!-- CHECK -->
+                    <div class="hidden">
+                        <div class="h-[20px] w-[20px] bg-[#E0E5EB] rounded-[100%]  text-center">
+                            <i class="ri-check-line  text-sm"></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="flex items-center justify-between sm:pr-2">
+                    <div class="flex items-center space-x-3 md:space-x-5">
+                        <i class="ri-medal-2-line"></i>
+                        <p class="font-[500] text-sm lg:text-sm">Graduation</p>
+                    </div>
+
+                    <!-- CHECK -->
+                    <div class="hidden">
+                        <div class="h-[20px] w-[20px] bg-[#E0E5EB] rounded-[100%] text-center">
+                            <i class="ri-check-line  text-sm"></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="flex items-center justify-between sm:pr-2">
+                    <div class="flex items-center space-x-3 md:space-x-5">
+                        <i class="ri-navigation-fill"></i>
+                        <p class="font-[500] text-sm lg:text-sm">Placements</p>
+                    </div>
+
+                    <!-- CHECK -->
+                    <div class="hidden">
+                        <div class="h-[20px] w-[20px] bg-[#E0E5EB] rounded-[100%] text-center">
+                            <i class="ri-check-line  text-sm "></i>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+
+
+        <!-- RIGHT DIV -->
+        <div id="data-div" class="px-4 py-5 lg:py-2 2xl:py-3 lg:ml-[19rem] xl:ml-[22rem]   lg:blur-none">
+
+            <!-- BACK BUTTON -->
+            <button id="back-btn" class="flex items-center text-[0.85rem] lg:text-base">
+                <i id="back-short-arrow" class="ri-arrow-left-s-line"></i>
+                <i id="back-arrow" class="hidden ri-arrow-left-line"></i>
+                <span class="ml-1 font-[500] ">Back</span>
+            </button>
+
+            <!-- LEC HEADING -->
+            <h1
+                class="text-[#B61802] font-[700] xl:text-[2rem] sm:text-[1.75rem] text-[1.5rem] mt-4 md:mt-5 xl:mt-6 2xl:mt-7">
+                Probation Week</h1>
+
+            <!--  -->
+            <p class="text-[#211D57] xl:text-[1rem] text-[0.85rem] mt-3 lg:mt-4 xl:w-[80%] ">Welcome to our probation
+                week, the final step before commencing your course journey. Upon successful completion, you'll
+                transition into the boot camp, where real learning begins.</p>
+            <p class="text-[#211D57] xl:text-[1rem] text-[0.85rem] mt-3 lg:mt-4 xl:w-[80%]">During this period, we'll
+                evaluate your performance and dedication, as it plays a crucial role in shaping your future in the
+                program. Best of luck on this important stage of your educational journey!"</p>
+
+
+            <!-- Message -->
+            <div
+                class="mt-6 lg:mt-7 inline-flex p-[12px] justify-center items-center rounded-[10px] bg-[#FECCCD] border-[1px] border-solid border-[#FECCCD]">
+                <li class="text-[#B61802] list-disc xl:text-[0.9rem] text-[0.75rem] font-[500] ml-[0.5rem]">
+                    Keep in mind once you complete this then you go to bootcamp
+                </li>
+            </div>
+            
+            <!-- DETAILS HEADING -->
+            <h1 class=" text-[#B61802] font-[700] xl:text-[2rem] sm:text-[1.75rem] text-[1.5rem] mt-8 lg:mt-10">
+                Details</h1>
+            
+            <!-- WEEK DURATION -->
+            <p class="mt-3 lg:mt-4  text-[#211D57] xl:text-[1.2rem] text-[1rem] xl:w-[80%] font-[700]">Probation period duration</p>
+
+            <ul class="px-8 mt-4  text-[#211D57] space-y-1 lg:space-y-2 xl:text-[1rem] text-[0.85rem]">
+                <li class="list-disc font-[500]">One week</li>
+            </ul>
+
+
+            <!-- PERFORMANCE -->
+            <p class="mt-7 lg:mt-8  text-[#211D57] xl:text-[1.2rem] text-[1rem] xl:w-[80%] font-[700]">Performance expectation and evaluation criteria</p>
+
+            <ul class="px-8 mt-3 xl:w-[80%]  text-[#211D57] space-y-1 lg:space-y-2 xl:text-[1rem] text-[0.85rem]">
+                <li class="list-disc font-[500]">You must attend all the sessions</li>
+                <li class="list-disc font-[500]">You must complete given assignments</li>
+                <li class="list-disc font-[500]">You must show your seriousness throughout the week in sessions, assignments, and discussions</li>
+            </ul>
+
+            <!-- MENTORSHIP -->
+            <p class="mt-7 lg:mt-8  text-[#211D57] xl:text-[1.2rem] text-[1rem] xl:w-[80%] font-[700]">Mentorship or training opportunities during probation</p>
+
+            <ul class="px-8 mt-2  xl:w-[80%]  text-[#211D57] space-y-1 lg:space-y-2 xl:text-[1rem] text-[0.85rem]">
+                <li class="list-disc font-[500]">The industry leaders give you mentorship regarding your technical and non-technical skills</li>
+                <li class="list-disc font-[500]">They tell you how the industry actually works and how to train yourself for the industry</li>
+                <li class="list-disc font-[500]">They share their best practices and techniques about interviews, jobs, startups, and how you present yourself to someone</li>
+            </ul>
+
+            <!-- CHECK BOX -->
+            <div class="flex items-center text-[#798086] space-x-3 mt-14">
+                <input required type="checkbox" name="check" id="check">
+                <label for="check" class="xl:text-[1rem] text-[0.85rem]">Before moving on to the next phase, ensure that
+                    you have completed this phase.</label>
+            </div>
+
+
+            <!-- CONTINUE BTN -->
+            <a id="continue-btn" href="bootcamp.html"
+                class="mt-6 xl:mt-8 bottomNext flex items-center justify-center px-3 py-2 sm:py-3 sm:px-5 cursor-pointer  text-white bg-[#B61802] rounded-lg w-[100%] sm:w-[12.5rem]">Continue
+                <span id="next-short-arrow"
+                    class="bottom-next-before material-symbols-outlined ml-1 text-sm sm:text-base">chevron_right</span>
+                <span id="next-arrow"
+                    class="bottom-next-after material-symbols-outlined ] ml-1 text-sm sm:text-base hidden">arrow_forward</span>
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <script>
+
+        // SIDEBAR
+        document.getElementById("menu").addEventListener("click", () => {
+            document.getElementById("sidebar").classList.toggle("hidden")
+            document.getElementById("data-div").classList.toggle("blur-sm")
+        })
+
+        document.getElementById("profileDropdown").addEventListener("click", () => {
+            document.getElementById("profileOptions").classList.toggle("hidden")
+        })
+
+        // BACK BTN
+        document.getElementById("back-btn").addEventListener("mouseenter", () => {
+            document.getElementById("back-arrow").classList.toggle("hidden")
+            document.getElementById("back-short-arrow").classList.toggle("hidden")
+        })
+
+        document.getElementById("back-btn").addEventListener("mouseleave", () => {
+            document.getElementById("back-arrow").classList.toggle("hidden")
+            document.getElementById("back-short-arrow").classList.toggle("hidden")
+        })
+
+        // CONTINUE BUTTON
+        document.getElementById("continue-btn").addEventListener("mouseenter", () => {
+            document.getElementById("next-short-arrow").classList.toggle("hidden")
+            document.getElementById("next-arrow").classList.toggle("hidden")
+        })
+
+        document.getElementById("continue-btn").addEventListener("mouseleave", () => {
+            document.getElementById("next-short-arrow").classList.toggle("hidden")
+            document.getElementById("next-arrow").classList.toggle("hidden")
+        })
+
+    </script>
+
+</body>
+
+</html>
